@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<httpProtocol>
+  <customHeaders>
+    <add name="Access-Control-Allow-Origin" value="*" />
+    <add name="Access-Control-Allow-Headers" value="Origin, X-Requested-With, Content-Type, Accept" />
+  </customHeaders>
+</httpProtocol>
+<title>Webcam</title>
+<meta charset='UTF­8'>
+<link rel='stylesheet' href='/stylesheets/style.css' > </link>
+</head>
+<body>
+<div id="view­box">
+</div>
+
+ <canvas id="mycanvas" style="width:300px; height:300px;"> </canvas>
+
+ <script src='/socket.io/socket.io.js' type='text/javascript' > </script>
+ <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+ <script src='javascripts/webcam_client_buffer.js' type='text/javascript'></script>
+ </body>
+ </html>

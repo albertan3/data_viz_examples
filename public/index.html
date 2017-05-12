@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Bubble chart</title>
+</head>
+<body ng-app="app">
+<br/>
+<div id="container" class="container">
+  <div class="row" ng-controller="BubbleCtrl">
+    <div class="col-lg-6 col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Bubble chart</div>
+        <div class="panel-body">
+          <canvas class="chart chart-bubble" chart-data="data"
+                  chart-colors="colors" chart-options="options"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="javascripts/angular.min.js"></script>
+<script src="javascripts/Chart.min.js"></script>
+<script src="javascripts/angular-chart.js"></script>
+<script src="javascripts/bubble.js"></script>
+</body>
+</html>

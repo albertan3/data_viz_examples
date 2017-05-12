@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<title>WebRTC</title>
+	<meta charset='utf-8'>
+	<!-- Latest compiled and minified CSS -->
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+	<!--<script src='https://code.jquery.com/jquery-1.12.4.min.js' type='text/javascript' ></script>-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="stylesheets/main.css" type="text/css" media="all">
+
+  <script src='/socket.io/socket.io.js' type='text/javascript' > </script>
+
+  <script src="javascripts/still_photo/capture.js"></script>
+	<script src="javascripts/still_photo/capture_two.js"></script>
+	<script src="javascripts/still_photo/create_filters.js"></script>
+</head>
+<body>
+
+
+<div class="contentarea">
+	<h1>
+		Take 2 photos for extra filters and accurate detection:  WebRTC: 2 Still photo capture albertcam
+	</h1>
+	<p>
+		This example demonstrates tensorflow -Albert.
+	</p>
+
+
+	<div class="input_area" style="margin-right:auto; margin-left:auto; width:50%;margin-top:10px;margin-bottom:10px;">
+
+	<input type="text" id = "name_input" placeholder = "Please input your name" style="margin-right:auto; margin-left:auto; width:100%;background: blanchedalmond;" />
+
+	</div>
+
+  <div class="camera">
+    <video id="video">Video stream not available.</video>
+    <button id="startbutton">Take photo</button>
+  </div>
+  <canvas id="canvas">
+  </canvas>
+  <div class="output">
+    <img id="photo" alt="The screen capture will appear in this box.">
+  </div>
+
+</div>
+
+<!--second photo for accuracy-->
+
+
+<div class="contentarea2">
+	<p>
+		Take 2nd photo for extra filters.
+	</p>
+  <div class="camera2">
+    <video id="video2">Video stream not available.</video>
+    <button id="startbutton2">Take photo</button>
+  </div>
+		  <canvas id="canvas2">
+		  </canvas>
+  <div class="output2">
+    <img id="photo2" alt="The screen capture will appear in this box.">
+  </div>
+
+</div>
+
+
+<div class="submit_area">
+	<input type="button" value ="create image filters" class="btn " id = "create_filters_btn"
+	   style=" margin: auto;
+	    display: block;
+			margin-bottom:20px;
+	    width: 500px;"/>
+<input type="button" value ="start tensorflow" class="btn btn-warning " id = "name_input"
+   style=" margin: auto;
+	 margin-bottom:20px;
+    display: block;
+    width: 500px;"/>
+
+</div>
+
+</body>
+</html>
