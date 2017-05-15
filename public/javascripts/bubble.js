@@ -5,6 +5,21 @@ angular.module('app', ['chart.js'])
       tooltips: { enabled: false }
     });
   }])
+  .controller('RadarCtrl', ['$scope', function ($scope) {
+
+    $scope.labels = ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'];
+    $scope.options = { legend: { display: false } };
+
+    $scope.data = [
+      [65, 59, 90, 81, 56, 55, 40],
+      [28, 48, 40, 19, 96, 27, 100]
+    ];
+
+    $scope.onClick = function (points, evt) {
+      console.log(points, evt);
+    };
+    
+  }])
   .controller('BubbleCtrl', ['$scope', '$interval', function ($scope, $interval) {
     'use strict';
 
@@ -52,4 +67,4 @@ angular.module('app', ['chart.js'])
     function randomRadius () {
       return Math.abs(randomScalingFactor()) / 4;
     }
-  }]);
+  }]); //end conttroller

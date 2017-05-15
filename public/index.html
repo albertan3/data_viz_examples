@@ -14,16 +14,32 @@
         <div class="panel-body">
           <canvas class="chart chart-bubble" chart-data="data"
                   chart-colors="colors" chart-options="options"></canvas>
+
+
         </div>
       </div>
     </div>
   </div>
 </div>
 
-
+<div class="col-lg-6 col-sm-12" id="radar-chart" ng-controller="RadarCtrl">
+  <div class="panel panel-default">
+    <div class="panel-heading">Radar Chart</div>
+    <div class="panel-body">
+      <canvas id="area" class="chart chart-radar" chart-data="data"
+              chart-labels="labels" chart-options="options" chart-click="onClick"></canvas>
+    </div>
+  </div>
+</div>
 <script src="javascripts/angular.min.js"></script>
 <script src="javascripts/Chart.min.js"></script>
 <script src="javascripts/angular-chart.js"></script>
+<script src="javascripts/app.js"></script>
+
+<script src="javascripts/dataset.js"></script>
 <script src="javascripts/bubble.js"></script>
+
+
+
 </body>
 </html>
